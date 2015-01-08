@@ -12,7 +12,7 @@ div.remodal {
 div.remodal-content {
   width: 100%;
   height: 100%;
-  overflow: visible;
+  overflow: auto;
   
   padding: 1em;
   background-color: #999;
@@ -28,11 +28,13 @@ div.remodal-content iframe {
   border: none;
   display: block;
   
+/*
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+*/
   
   -webkit-overflow-scrolling: touch;
   overflow: hidden;
