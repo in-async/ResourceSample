@@ -6,7 +6,7 @@ div.remodal {
 }
 div.remodal-content {
   padding: 1em;
-  background-color: #eee;
+  background-color: #999;
 }
 div.remodal-content iframe {
   -webkit-overflow-scrolling: touch;
