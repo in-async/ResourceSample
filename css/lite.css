@@ -9,6 +9,11 @@ div.remodal {
   
   padding: 1em;
 }
+div.remodal-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 div.remodal-content {
   width: 100%;
   height: 100%;
@@ -18,12 +23,7 @@ div.remodal-content {
   padding: 1em;
   background-color: #999;
 
-  height: 10000px;
-}
-div.remodal-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+/*  height: 10000px;*/
 }
 div.remodal-content iframe {
   width: 100%;
@@ -31,8 +31,8 @@ div.remodal-content iframe {
   border: none;
   display: block;
 
-  height: auto;
 /*
+  height: auto;
   position: absolute;
   left: 0;
   top: 0;
