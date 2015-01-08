@@ -17,6 +17,8 @@ div.remodal-content {
   
   padding: 1em;
   background-color: #999;
+
+  height: 10000px;
 }
 div.remodal-iframe {
   width: 100%;
@@ -28,9 +30,7 @@ div.remodal-content iframe {
   height: 100%;
   border: none;
   display: block;
-  
-  height: 10000px;
-  
+
 /*
   position: absolute;
   left: 0;
