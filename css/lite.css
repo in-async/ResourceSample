@@ -1,7 +1,7 @@
 div.remodal-overlay {
   padding: 1em;
 }
-div.remodal-overlay:after {
+div.remodal-overlay:before {
   content: 'remodal-overlay';
 }
 div.remodal {
