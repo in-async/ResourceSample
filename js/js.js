@@ -30,5 +30,6 @@ $('div.remodal-content').on('resize', function(e) {
 })
 */
 $('div.remodal-content iframe').on('load', function(e) {
+    $('.unframe-btn').text('height: ' + $(this).height());
     $(this).css('height', $(this).height());
 })
