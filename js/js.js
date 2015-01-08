@@ -8,7 +8,7 @@ $('div.remodal-content').eq(1)
 })
 ;
 $('div.remodal-content iframe, document, window')
-.on('touchmove', function (e) {
+.on('touchmove, touchstart, touchend', function (e) {
     alert('touchmove');
     var top = $(this).scrollTop();
     $('.unframe-btn').text('touchmove: ' + top);
