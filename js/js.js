@@ -1,3 +1,4 @@
+/*
 $('div.remodal-content').eq(1)
 .scroll(function (e) {
     var top = $(this).scrollTop();
@@ -27,3 +28,4 @@ $('document, window, body')
 $('div.remodal-content').on('resize', function(e) {
     alert('resize');
 })
+*/
