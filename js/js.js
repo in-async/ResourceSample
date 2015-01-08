@@ -33,7 +33,10 @@ $('div.remodal-content iframe').on('load', function(e) {
     
 //    $('div.remodal-content').height(height);
 //    $('div.remodal-content').css('height', height + 'px');
+    
+    $('div.remodal-iframe div.remodal-content').css('overflow', 'hidden');
     $(this).css('height', '100%');
+    $('div.remodal-iframe div.remodal-content').css('overflow', 'overflow');
     var height = $(this).height();
     
     $('.unframe-btn').text('height: ' + height);
