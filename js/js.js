@@ -29,13 +29,12 @@ $('div.remodal-content').on('resize', function(e) {
     alert('resize');
 })
 */
-/*
 $('div.remodal-content iframe').on('load', function(e) {
-    var height = $(this).height();
     
 //    $('div.remodal-content').height(height);
 //    $('div.remodal-content').css('height', height + 'px');
+    $(this).css('height', '100%');
+    var height = $(this).height();
     
     $('.unframe-btn').text('height: ' + height);
 })
-*/
