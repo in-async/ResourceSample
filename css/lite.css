@@ -1,6 +1,6 @@
 div.remodal-overlay {
   padding: 1em;
-  position: static;
+  position: absolute;
 }
 div.remodal {
   padding: 0;
