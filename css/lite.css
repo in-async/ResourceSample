@@ -1,6 +1,13 @@
-div.remodal {
-  padding: 5em;
+div.remodal-overlay {
+  padding: 1em;
 }
-div.remodal-iframe iframe {
+div.remodal {
+  padding: 1em;
+}
+div.remodal-content {
+  padding: 1em;
+  background-color: #eee;
+}
+div.remodal-content iframe {
   -webkit-overflow-scrolling: touch;
 }
