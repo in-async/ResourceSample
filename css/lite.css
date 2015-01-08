@@ -29,3 +29,34 @@ div.remodal-content iframe {
   
   -webkit-overflow-scrolling: touch;
 }
+
+div.toolbar {
+  position: fixed;
+  height: 2.25em;
+  line-height: 2.25;
+  bottom: .5em;
+  left: .5em;
+  right: .5em;
+  z-index: 10002;
+  font-size: 16px;
+}
+div.toolbar a.back-btn {
+  position: fixed;
+  left: 0;
+  padding: 0 1em;
+  background-color: rgba(255, 255, 255, .9);
+  -moz-border-radius: 10em 2em 2em 10em;
+  -webkit-border-radius: 10em 2em 2em 10em;
+  border-radius: 10em 2em 2em 10em;
+  border: 1px solid #ccc;
+}
+div.toolbar a.unframe-btn {
+  position: fixed;
+  right: 0;
+  padding: 0 1em;
+  background-color: rgba(255, 255, 255, .9);
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  border: 1px solid #ccc;
+}
