@@ -24,3 +24,6 @@ $('document, window, body')
     $('.unframe-btn').text('touchmove: ' + top);
 })
 ;
+$('div.remodal-content iframe').focus(function(e) {
+    alert('focus');
+})
