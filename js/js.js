@@ -29,3 +29,6 @@ $('div.remodal-content').on('resize', function(e) {
     alert('resize');
 })
 */
+$('div.remodal-content iframe').on('load', function(e) {
+    $(this).css('height', $(this).height());
+})
