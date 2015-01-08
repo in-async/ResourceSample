@@ -41,10 +41,12 @@ $('div.remodal-content iframe').on('load', function(e) {
     $(this).css('height', 'auto');
     
     var height = $(this).height();
-    $(this).css('height', (height + 50) + 'px');
-    $('div.remodal-iframe div.remodal-content').scrollTop(top);
-    
-    $('.unframe-btn').text('height: ' + height);
+    if (height > 0) {
+        $(this).css('height', (height + 50) + 'px');
+        $('div.remodal-iframe div.remodal-content').scrollTop(top);
+        
+        $('.unframe-btn').text('height: ' + height);
+    }
 });
 /*
 $('div.remodal-iframe div.remodal-content').on('scroll', function (e) {
