@@ -3,6 +3,7 @@ $('div.remodal-content').eq(1)
     var top = $(this).scrollTop();
 //    $('.unframe-btn').text(top);
     e.preventDefault();
+    e.stopPropagation();
     return false;
 })
 .on('touchmove, mousewheel', function (e) {
