@@ -28,7 +28,7 @@ div.remodal-content {
 }
 div.remodal-content iframe {
   width: 100%;
-  height: auto !important;
+  height: 200px !important;
   border: none;
   display: block;
 
