@@ -40,17 +40,8 @@ div.toolbar {
   z-index: 10002;
   font-size: 16px;
 }
-div.toolbar a.back-btn {
-  position: fixed;
-  left: 0;
-  padding: 0 1em;
-  background-color: rgba(255, 255, 255, .9);
-  -moz-border-radius: 10em 2em 2em 10em;
-  -webkit-border-radius: 10em 2em 2em 10em;
-  border-radius: 10em 2em 2em 10em;
-  border: 1px solid #ccc;
-}
 div.toolbar a.unframe-btn {
+  bottom: 0;
   position: fixed;
   right: 0;
   padding: 0 1em;
