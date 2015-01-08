@@ -5,7 +5,7 @@ $('div.remodal-content').eq(1)
     e.preventDefault();
     return false;
 })
-.on('touchmove', function (e) {
+.on('touchmove, mousewheel', function (e) {
     var top = $(this).scrollTop();
     $('.unframe-btn').text('touchmove: ' + top);
 })
