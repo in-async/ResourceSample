@@ -34,16 +34,19 @@ $('div.remodal-content iframe').on('load', function(e) {
 //    $('div.remodal-content').height(height);
 //    $('div.remodal-content').css('height', height + 'px');
     
-    $(this).css('height', 'auto');
-    var height = $(this).height();
     var top = $('div.remodal-iframe div.remodal-content').scrollTop();
-    alert(top);
     $('div.remodal-iframe div.remodal-content').data('prev-scroll-top', top);
+    alert(top);
+    
+    $(this).css('height', 'auto');
+    
+    var height = $(this).height();
     $(this).css('height', (height + 50) + 'px');
-//    $('div.remodal-iframe div.remodal-content').scrollTop(top);
+    $('div.remodal-iframe div.remodal-content').scrollTop(top);
     
     $('.unframe-btn').text('height: ' + height);
 });
+/*
 $('div.remodal-iframe div.remodal-content').on('scroll', function (e) {
     var prevTop = $(this).data('prev-scroll-top');
     if (typeof prevTop !== 'undefined') {
@@ -52,3 +55,4 @@ $('div.remodal-iframe div.remodal-content').on('scroll', function (e) {
         $(this).removeData('prev-scroll-top');
     }
 });
+*/
