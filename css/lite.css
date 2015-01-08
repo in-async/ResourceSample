@@ -13,6 +13,7 @@ div.remodal-content {
   width: 100%;
   height: 100%;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   
   padding: 1em;
   background-color: #999;
