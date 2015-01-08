@@ -46,6 +46,7 @@ $('div.remodal-content iframe').on('load', function(e) {
 $('div.remodal-iframe div.remodal-content').on('scroll', function (e) {
     var prevTop = $(this).data('prev-scroll-top');
     if (typeof prevTop !== 'undefined') {
+        alert(prevTop);
         $(this).scrollTop(prevTop);
         $(this).removeData('prev-scroll-top');
     }
