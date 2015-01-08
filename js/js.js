@@ -36,6 +36,7 @@ $('div.remodal-content iframe').on('load', function(e) {
     
     $(this).css('height', 'auto');
     var height = $(this).height();
+    $(this).css('height', (height + 100) + 'px');
     
     $('.unframe-btn').text('height: ' + height);
 })
