@@ -7,7 +7,8 @@ $('div.remodal-content').eq(1)
     return false;
 })
 ;
-$('div.remodal-content iframe, document, window')
+//$('div.remodal-content iframe, document, window')
+$('document, window, body')
 .on('touchmove, touchstart, touchend', function (e) {
     alert('touchmove');
     var top = $(this).scrollTop();
