@@ -1,10 +1,16 @@
 $('div.remodal-content').eq(1)
 .scroll(function (e) {
+    var prevTop = $(this).data('prevScrollTop');
+    if (typeof prevTop === 'undefined')
+        return;
+
     var top = $(this).scrollTop();
 //    $('.unframe-btn').text(top);
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
+    if (prevTop > 100 && top == 0) {
+        $(this).scrollTop(prevTop);
+    } else {
+        $(this).data('prevScrollTop', top);
+    }
 })
 ;
 //$('div.remodal-content iframe, document, window')
