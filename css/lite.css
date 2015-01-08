@@ -1,6 +1,9 @@
 div.remodal-overlay {
   padding: 1em;
 }
+div.remodal-overlay:after {
+  content: "remodal-overlay";
+}
 div.remodal {
   padding: 0;
   min-height: inherit;
