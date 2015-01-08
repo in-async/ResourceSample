@@ -30,6 +30,8 @@ $('div.remodal-content').on('resize', function(e) {
 })
 */
 $('div.remodal-content iframe').on('load', function(e) {
+    var top = $('div.remodal-content').scrollTop();
     $(this).css('height', 'auto');
+    $('div.remodal-content').scrollTop(top);
     $('.unframe-btn').text('height: ' + $(this).height());
 })
