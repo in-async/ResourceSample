@@ -31,7 +31,7 @@ div.remodal-content iframe {
 }
 
 div.toolbar {
-  position: static;
+  position: fixed;
   height: 2.25em;
   line-height: 2.25;
   bottom: .5em;
