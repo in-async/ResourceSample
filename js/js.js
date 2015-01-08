@@ -36,7 +36,7 @@ $('div.remodal-content iframe').on('load', function(e) {
     
     var top = $('div.remodal-iframe div.remodal-content').scrollTop();
     $('div.remodal-iframe div.remodal-content').data('prev-scroll-top', top);
-    alert(top);
+//    alert(top);
     
     $(this).css('height', 'auto');
     
