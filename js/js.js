@@ -24,6 +24,6 @@ $('document, window, body')
     $('.unframe-btn').text('touchmove: ' + top);
 })
 ;
-$('div.remodal-content iframe').on('resize', function(e) {
+$('div.remodal-content').on('resize', function(e) {
     alert('resize');
 })
