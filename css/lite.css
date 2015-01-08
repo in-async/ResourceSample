@@ -1,5 +1,17 @@
+/*
 div.remodal-overlay {
   padding: 1em;
+}
+div.remodal {
+  padding: 1em;
+}
+div.remodal-content {
+  padding: 1em;
+  background-color: #999;
+}
+*/
+
+div.remodal-overlay {
   /*position: absolute;*/
 }
 a.remodal-close {
@@ -9,8 +21,6 @@ div.remodal {
   padding: 0;
   min-height: inherit;
   height: 100%;
-  
-  padding: 1em;
 }
 div.remodal-iframe {
   width: 100%;
@@ -29,9 +39,6 @@ div.remodal-content {
   height: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  
-  padding: 1em;
-  background-color: #999;
 }
 div.remodal-content iframe {
   border: none;
