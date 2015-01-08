@@ -36,7 +36,9 @@ $('div.remodal-content iframe').on('load', function(e) {
     
     $(this).css('height', 'auto');
     var height = $(this).height();
+    var top = $('div.remodal-iframe div.remodal-content').scrollTop();
     $(this).css('height', (height + 100) + 'px');
+    $('div.remodal-iframe div.remodal-content').scrollTop(top);
     
     $('.unframe-btn').text('height: ' + height);
 })
