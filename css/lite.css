@@ -31,7 +31,7 @@ div.remodal-content iframe {
 }
 
 div.toolbar {
-  position: fixed;
+  position: static;
   height: 2.25em;
   line-height: 2.25;
   bottom: .5em;
@@ -44,7 +44,7 @@ div.toolbar a.unframe-btn {
   z-index: 10002;
   bottom: 0;
   
-  position: fixed;
+  position: static;
   right: 0;
   padding: 0 1em;
   background-color: rgba(255, 255, 255, .9);
