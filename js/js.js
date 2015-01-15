@@ -38,11 +38,17 @@ $('div.remodal-content iframe').on('load', function(e) {
     $('div.remodal-iframe div.remodal-content').data('prev-scroll-top', top);
 //    alert(top);
     
+    var prevHeight = $(this).height();
     $(this).css('height', 'auto');
     
     var height = $(this).height();
     if (height > 0) {
-        $(this).css('height', (height + 50) + 'px');
+        if (height < 200) {
+            // 元に戻す
+            $(this).css('height', prevHeight + 'px');
+        } else {
+            $(this).css('height', (height + 50) + 'px');
+        }
         $('div.remodal-iframe div.remodal-content').scrollTop(top);
         
         $('.unframe-btn').text('height: ' + height);
