@@ -14,9 +14,6 @@ div.remodal-content {
 div.remodal-overlay {
   /*position: absolute;*/
 }
-a.remodal-close {
-  display: none;
-}
 div.remodal {
   padding: 0;
   min-height: inherit;
@@ -33,6 +30,9 @@ div.remodal-iframe {
   right: 0;
   bottom: 0;
 */
+}
+div.remodal-iframe a.remodal-close {
+  display: none;
 }
 div.remodal-content {
   width: 100%;
@@ -58,6 +58,11 @@ div.remodal-content iframe {
   -webkit-overflow-scrolling: touch;
   overflow: hidden;
 */
+}
+
+div.remodal-image {
+  width: auto;
+  height: auto;
 }
 
 div.toolbar {
