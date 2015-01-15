@@ -92,3 +92,10 @@ div.toolbar a.unframe-btn {
   border-radius: 10em;
   border: 1px solid #ccc;
 }
+
+header.header {
+  text-align: center;
+}
+header.header img{
+  margin: .25em;
+}
