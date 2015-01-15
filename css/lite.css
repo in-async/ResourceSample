@@ -66,6 +66,7 @@ div.remodal-content iframe {
 }
 
 div.remodal-image {
+  height: auto;
 }
 
 div.toolbar {
