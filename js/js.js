@@ -30,7 +30,10 @@ $('div.remodal-content').on('resize', function(e) {
 })
 */
 $('div.remodal-content iframe').on('load', function(e) {
-    
+    var isIOS = /iP(hone|od|ad)/.test(navigator.platform);
+    if (!isIOS)
+        return;
+        
 //    $('div.remodal-content').height(height);
 //    $('div.remodal-content').css('height', height + 'px');
     
