@@ -14,15 +14,9 @@ if (isIOS) {
         console.log('iframe.load');
         clearInterval(intervalId);
         
-        function on_disable_touch(e) {
-            console.log('on_disable_touch');
-            e.preventDefault();
-        }
-            
         var $remodalContent = $('div.remodal-iframe div.remodal-content');
         var top = $remodalContent.scrollTop();
         //$remodalContent.data('prev-scroll-top', top);
-        $(document).on('touchstart touchmove touchend', on_disable_touch)
         try {
             // iframe.height 最適化
             $(this).css('height', 'auto');
@@ -36,7 +30,14 @@ if (isIOS) {
         }
         finally {
             $remodalContent.scrollTop(top);
-//            $(document).off('touchstart touchmove touchend', on_disable_touch)
+            var setCount = 0;
+            var intervalId = setInterval(function() {
+                console.log('setScrollTop');
+                $remodalContent.scrollTop(top);
+                if (++setCount >= 5) {
+                    clearInterval(intervalId);
+                }
+            }, 100);
         }
     });
 }
