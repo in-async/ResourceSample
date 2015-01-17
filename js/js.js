@@ -27,8 +27,8 @@ if (isIOS) {
         var height = $(this).height();
         if (height > 0) {
             $(this).height(height + 50);
-            $html = $('html').css('overflow', '');
             $remodalContent.scrollTop(top);
+            $html = $('html').css('overflow', '');
             
             $('.unframe-btn').text('height: ' + height);    // for debug
         }
