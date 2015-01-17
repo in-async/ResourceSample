@@ -7,8 +7,11 @@
 
 
 /* 
- * trial
+ * trial for iOS
  */
 div.remodal-iframe div.remodal-content iframe {
   height: 10000px;
+}
+div.remodal-iframe div.remodal-content {
+  overflow: auto;
 }
