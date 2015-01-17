@@ -12,29 +12,29 @@ if (isIOS) {
     
     $('div.remodal-content iframe').on('load', function(e) {
         clearInterval(intervalId);
-            
-    //    $('div.remodal-content').height(height);
-    //    $('div.remodal-content').css('height', height + 'px');
         
+        function on_disable_touch(e) {
+            e.preventDefault();
+        }
+            
         var $remodalContent = $('div.remodal-iframe div.remodal-content');
         var top = $remodalContent.scrollTop();
-        $remodalContent.data('prev-scroll-top', top);
-    //    alert(top);
-        
-        // iframe.height 最適化
-        $remodalContent.css('overflow', 'hidden');
+        //$remodalContent.data('prev-scroll-top', top);
+        $remodalContent.on('touchmove', on_disable_touch)
         try {
+            // iframe.height 最適化
             $(this).css('height', 'auto');
+            
             var height = $(this).height();
             if (height > 0) {
                 $(this).height(height + 50);
-                $remodalContent.scrollTop(top);
-                
+    
                 $('.unframe-btn').text('height: ' + height);    // for debug
             }
         }
         finally {
-            $remodalContent.css('overflow', '');
+            $remodalContent.scrollTop(top);
+            $remodalContent.off('touchmove', on_disable_touch)
         }
     });
 }
