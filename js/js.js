@@ -29,35 +29,46 @@ $('div.remodal-content').on('resize', function(e) {
     alert('resize');
 })
 */
-$('div.remodal-content iframe').on('load', function(e) {
-    var isIOS = /iP(hone|od|ad)/.test(navigator.platform);
-    if (!isIOS)
-        return;
-        
-//    $('div.remodal-content').height(height);
-//    $('div.remodal-content').css('height', height + 'px');
-    
-    var $remodalContent = $('div.remodal-iframe div.remodal-content');
-    
-    var top = $remodalContent.scrollTop();
-    $remodalContent.data('prev-scroll-top', top);
-//    alert(top);
-    
-    $(this).css('height', 'auto');
-    
-    var height = $(this).height();
-    if (height > 0) {
-        if (height < 200) {
-            // 元に戻す
-            $(this).css('height', '');
-        } else {
-            $(this).css('height', (height + 50) + 'px');
+var isIOS = /iP(hone|od|ad)/.test(navigator.platform);
+if (isIOS) {
+    var prevIframeHeight = 10000;
+    var intervalId = setInterval(function() {
+        console.log(intervalId);
+        $iframe = $('div.remodal-content iframe')
+        var iframeHeight = $iframe.height();
+        if (iframeHeight > prevIframeHeight) {
+            prevIframeHeight = iframeHeight + 10000;
+            $iframe.height(prevIframeHeight);
         }
-        $remodalContent.scrollTop(top);
+    }, 500);
+    
+    $('div.remodal-content iframe').on('load', function(e) {
+        clearInterval(intervalId);
+            
+    //    $('div.remodal-content').height(height);
+    //    $('div.remodal-content').css('height', height + 'px');
         
-        $('.unframe-btn').text('height: ' + height);    // for debug
-    }
-});
+        var $remodalContent = $('div.remodal-iframe div.remodal-content');
+        var top = $remodalContent.scrollTop();
+        $remodalContent.data('prev-scroll-top', top);
+    //    alert(top);
+        
+        $(this).css('height', 'auto');
+        
+        var height = $(this).height();
+        if (height > 0) {
+            if (height < 200) {
+                // 元に戻す
+                $(this).css('height', '');
+            } else {
+                $(this).css('height', (height + 50) + 'px');
+            }
+            $remodalContent.scrollTop(top);
+            
+            $('.unframe-btn').text('height: ' + height);    // for debug
+        }
+    });
+}
 /*
 $('div.remodal-iframe div.remodal-content').on('scroll', function (e) {
     var prevTop = $(this).data('prev-scroll-top');
