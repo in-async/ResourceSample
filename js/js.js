@@ -23,14 +23,18 @@ if (isIOS) {
         
         // iframe.height 最適化
         $html = $('html').css('overflow', 'hidden');
-        $(this).css('height', 'auto');
-        var height = $(this).height();
-        if (height > 0) {
-            $(this).height(height + 50);
-            $remodalContent.scrollTop(top);
-            
-            $('.unframe-btn').text('height: ' + height);    // for debug
+        try {
+            $(this).css('height', 'auto');
+            var height = $(this).height();
+            if (height > 0) {
+                $(this).height(height + 50);
+                $remodalContent.scrollTop(top);
+                
+                $('.unframe-btn').text('height: ' + height);    // for debug
+            }
         }
-        $html.css('overflow', '');
+        finally {
+            $html.css('overflow', '');
+        }
     });
 }
