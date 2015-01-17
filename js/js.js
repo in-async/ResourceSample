@@ -22,7 +22,7 @@ if (isIOS) {
     //    alert(top);
         
         // iframe.height 最適化
-        $html = $('html').css('overflow', 'hidden');
+        $remodalContent.css('overflow', 'hidden');
         try {
             $(this).css('height', 'auto');
             var height = $(this).height();
@@ -34,7 +34,7 @@ if (isIOS) {
             }
         }
         finally {
-            $html.css('overflow', '');
+            $remodalContent.css('overflow', '');
         }
     });
 }
