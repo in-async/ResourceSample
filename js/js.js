@@ -22,7 +22,7 @@ if (isIOS) {
         var $remodalContent = $('div.remodal-iframe div.remodal-content');
         var top = $remodalContent.scrollTop();
         //$remodalContent.data('prev-scroll-top', top);
-        $remodalContent.on('touchstart touchmove touchend', on_disable_touch)
+        $(document).on('touchstart touchmove touchend', on_disable_touch)
         try {
             // iframe.height 最適化
             $(this).css('height', 'auto');
@@ -36,7 +36,7 @@ if (isIOS) {
         }
         finally {
             $remodalContent.scrollTop(top);
-//            $remodalContent.off('touchstart touchmove touchend', on_disable_touch)
+//            $(document).off('touchstart touchmove touchend', on_disable_touch)
         }
     });
 }
