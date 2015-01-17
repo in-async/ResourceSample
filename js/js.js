@@ -11,6 +11,7 @@ if (isIOS) {
     }, 500);
     
     $('div.remodal-content iframe').on('load', function(e) {
+        console.log('iframe.load');
         clearInterval(intervalId);
         
         function on_disable_touch(e) {
@@ -35,7 +36,7 @@ if (isIOS) {
         }
         finally {
             $remodalContent.scrollTop(top);
-            $remodalContent.off('touchstart touchmove touchend', on_disable_touch)
+//            $remodalContent.off('touchstart touchmove touchend', on_disable_touch)
         }
     });
 }
