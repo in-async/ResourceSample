@@ -14,6 +14,7 @@ if (isIOS) {
         clearInterval(intervalId);
         
         function on_disable_touch(e) {
+            console.log('on_disable_touch');
             e.preventDefault();
         }
             
