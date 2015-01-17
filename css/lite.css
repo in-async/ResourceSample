@@ -5,6 +5,10 @@
   }
 }
 
+div.toolbar a.unframe-btn {
+  position: absolute;
+}
+
 
 /* 
  * trial for iOS
