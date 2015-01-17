@@ -37,8 +37,10 @@ $('div.remodal-content iframe').on('load', function(e) {
 //    $('div.remodal-content').height(height);
 //    $('div.remodal-content').css('height', height + 'px');
     
-    var top = $('div.remodal-iframe div.remodal-content').scrollTop();
-    $('div.remodal-iframe div.remodal-content').data('prev-scroll-top', top);
+    var $remodalContent = $('div.remodal-iframe div.remodal-content');
+    
+    var top = $remodalContent.scrollTop();
+    $remodalContent.data('prev-scroll-top', top);
 //    alert(top);
     
     $(this).css('height', 'auto');
@@ -51,9 +53,9 @@ $('div.remodal-content iframe').on('load', function(e) {
         } else {
             $(this).css('height', (height + 50) + 'px');
         }
-        $('div.remodal-iframe div.remodal-content').scrollTop(top);
+        $remodalContent.scrollTop(top);
         
-        $('.unframe-btn').text('height: ' + height);
+        $('.unframe-btn').text('height: ' + height);    // for debug
     }
 });
 /*
