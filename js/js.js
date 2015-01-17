@@ -34,10 +34,10 @@ if (isIOS) {
             var intervalId = setInterval(function() {
                 console.log('setScrollTop');
                 $remodalContent.scrollTop(top);
-                if (++setCount >= 5) {
+                if (++setCount >= 6) {
                     clearInterval(intervalId);
                 }
-            }, 100);
+            }, 50);
         }
     });
 }
