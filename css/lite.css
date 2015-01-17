@@ -1,3 +1,14 @@
+@media only screen and (max-width: 40.063em) /* max-width 641px */ {
+  div.remodal-iframe {
+    max-width: none;
+    max-height: 100%;
+  }
+}
+
+
+/* 
+ * trial
+ */
 div.remodal-iframe div.remodal-content iframe {
   height: 10000px;
 }
