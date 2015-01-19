@@ -9,6 +9,16 @@ div.toolbar a.unframe-btn {
   position: absolute;
 }
 
+header.header a {
+  max-width: 700px;
+  margin: auto;
+  display: block;
+}
+div.body-content, #categoryNav ul {
+  max-width: 700px;
+  margin: auto;
+}
+
 
 /* 
  * trial for iOS
